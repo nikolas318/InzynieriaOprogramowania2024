@@ -2,6 +2,15 @@
 
 using namespace std;
 
+int silnia(int a){
+	if (a == 0){
+		return 1;
+	}
+	else{
+		return a * silnia(a - 1); 
+	}
+}
+
 int main(){
 	
 	int n = 0;
@@ -12,8 +21,8 @@ int main(){
 		cout << "Wczytano wartosc ujemna";
 	}
 	else {
-		cout << n;
+		cout << silnia(n);
 	}
-			
+
 	return 0;
 }
